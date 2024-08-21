@@ -27,10 +27,49 @@ A memória cache foi feita como uma solução para esses problemas citados anter
 
 ## Estrutura da Cache
 
-## Função de mapeamento
-
+## Funções de mapeamento
+Como o número de blocos na memória cache é sempre menor que o na memória principal, é necessário utilizar algoritimos que mapeiam os blocos da memória principal e atribuem eles aos blocos da memória cache, esses algoritimos são as funções de mapeamento, com as principais sendo:
+  
 ### Mapeamento Direto
+No mapeamento direto, cada bloco na memória principal é mapeado em apenas uma linha da cache, segundo a equação `i = j mod(m)`, onde `i` é o númeoro da linha na cache, `j` é o número do bloco da memória principal e `m` o número de linhas total da cache.
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+Já que vários blocos da memória principal podem ser mapeados na mesma linha da memória cache, para saber se o bloco que se quer acessar é o que já está na cache, um campo chamado de tag (ou rótulo) deve ser usado para identificar cada bloco.
+
+Nesse método, o endereço de cada bloco na cache deve ser dividido em 4 campos:
+- **Byte offset**: Para arquiteturas endereçadas a byte
+- **Word offset**: Para quando um bloco possui mais de uma palavra
+- **Index**: Resultado da operação de módulo (`i`)
+- **Tag**: Resto do endereço (Identificação do bloco)
+
+Além disso, para saber se a entrada da cache possui um endereço válido ou não temos que usar um bit de validade, geralmente marcado por `V`.
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+#### Vantagens
+- É a técnica mais simples
+- Possui baixo custo de implementação
+
+#### Desvantagem
+- Cada bloco só pode ser mapeado para uma posição fixa da cache, logo, se forem acessados a dois blocos distintos mapeados na mesma linha eles serão continuamente trocados na cache, o que leva a uma baixa taxa de acertos. 
 
 ### Mapeamento Associativo
+O mapeamento associativo evita a desvantagem do mapeamento direto, pois um bloco da memória principal pode ser carregado em qualquer linha da cache.
+
+Nesse método, diferentemente do anterior, o endereço é dividido em somente 3 campos:
+- **Byte offset**: Para arquiteturas endereçadas a byte
+- **Word offset**: Para quando um bloco possui mais de uma palavra
+- **Tag**: Resto do endereço (Identificação do bloco)
+
+Para determinar se um bloco está na cache ou não, a lógica de controle de memória cache compara a tag do endereço do bloco com as tags de todos os blocos da cache.
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+#### Vantagem:
+- Maior flexibilidade para escplher a linha a ser substituída quando um novo bloco é trazido para a cache.
+
+#### Desvantagem:
+- Maior complexidade do circuito necessários para a comparação das tags de todos os blocos da cache em paralelo.
 
 ### Mapeamento Associativo por Conjunto
