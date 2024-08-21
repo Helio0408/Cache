@@ -2,7 +2,7 @@
 
 ## Introdução
 
-A memória é um componente importante nos computadores. Ela é uma parte fundamental da arquitetura de von Neumann, uma arquitetura que é base de muitos computadores até hoje. Nela, a função da memória é armazenar instruções que podem ser decodificadas e lidas pela Unidade de Controle e também armazenar dados, como resultados de operações de soma e subtração da Unidade Lógica de Controle (ULA).
+A memória é um componente importante nos computadores. Ela é uma parte fundamental da arquitetura de von Neumann, uma arquitetura que é base de muitos computadores até hoje. Nessa arquitetura, a função da memória é armazenar instruções que podem ser decodificadas e lidas pela Unidade de Controle e também armazenar dados, como resultados de operações de soma e subtração da Unidade Lógica de Controle (ULA).
 
 O computador possui vários tipos de armazenar dados em memória. Dentre elas, estão:
 - **Registradores**: São unidades de memória dentro do próprio processador. São neles que são feitas as operações da ULA do computador, e também são as memórias de mais rápido acesso. Geralmente, o processador os possui em pequena quantidade.
@@ -13,11 +13,11 @@ Na prática, códigos e programas são armazenados em memória em disco. Quando 
 
 Porém, com o desenvolvimento computacional, notou-se que a RAM tornou-se um empecilho para a velocidade do processamento. Isso porque a velocidade que o processador é capaz de processar os dados é muito mais rápido do que a velocidade da leitura da RAM. Para resolver esse problema, foi necessário criar uma memória, assim como a RAM, que o processador realizasse o acesso mais rapidamente, onde pudesse guardar dados que fossem utilizados de maneira recorrente.
 
-### Tópico 1
-
 ## Memória Cache
 
 ### O que é ?
+
+A memória cache foi feita como uma solução para esses problemas citados anteriormente. Ela é uma memória que fica entre o processador e a RAM, em que são guardados dados que são utilizados de maneira recorrente.
 
 ### Características
 
