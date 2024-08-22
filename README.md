@@ -2,7 +2,7 @@
 
 ## Introdução
 
-<div align="justify">
+
 A memória é um componente importante nos computadores. Ela é uma parte fundamental da arquitetura de von Neumann, uma arquitetura que é base de muitos computadores até hoje. Nessa arquitetura, a função da memória é armazenar instruções que podem ser decodificadas e lidas pela Unidade de Controle e também armazenar dados, como resultados de operações de soma e subtração da Unidade Lógica de Controle (ULA).
 
 O computador possui vários tipos de armazenar dados em memória. Dentre elas, estão:
@@ -13,43 +13,43 @@ O computador possui vários tipos de armazenar dados em memória. Dentre elas, e
 Na prática, códigos e programas são armazenados em memória em disco. Quando precisam ser utilizados, são carregados na RAM. O processador lê as instruções armazenadas na RAM, carrega os valores necessários para os registradores, realiza operações com eles e guarda-os na RAM caso necessário.
 
 Porém, com o desenvolvimento computacional, notou-se que a RAM tornou-se um empecilho para a velocidade do processamento. Isso porque a velocidade que o processador é capaz de processar os dados é muito mais rápido do que a velocidade da leitura da RAM. Para resolver esse problema, foi necessário criar uma memória, assim como a RAM, que o processador realizasse o acesso mais rapidamente, onde pudesse guardar dados que fossem utilizados de maneira recorrente.
-</div>
+
 
 ## Memória Cache
 
 ### O que é ?
 
-<div align="justify">
+
 A memória cache foi feita como uma solução para esses problemas citados anteriormente. Ela é uma memória que fica entre o processador e a RAM, em que são guardados dados que são utilizados de maneira recorrente.
-</div>
+
 
 ### Características
 
-<div align="justify">
+
 Uma das características principais da cache é que sua organização interna é feita diferente da organização interna da RAM. Enquanto a RAM organiza os dados por indexação, a cache organiza os dados pelo seu conteúdo.
 
 O que isso quer dizer é que a cache segue dois princípios quando organiza seus dados: o princípio da localidade temporal e localidade espacial. O princípio da localidade temporal quer dizer que se um dado foi utilizado recentemente, ele provavelmente será utilizado novamente. O princípio da temporalidade espacial consiste em que se um dado foi utilizado, as posições pertos desse dado também podem ser utilizadas futuramente. Um exemplo disso é uma estrutura que usa mais memória que uma palavra, ou uma lista contígua de dados.
-</div>
+
 
 ## Tamanho da Cache
 
-<div align="justify">
+
 O tamanho da cache é definido a partir de um trade-off. Quanto maior o tamanho da cache, mais portas lógicas ela terá que usar para indexar a memória, tendo um maior tempo de propagação e, por fim, sendo mais lenta o seu acesso. Por outro lado, uma função de mapeamento tem uma taxa de acerto mais alta.
 
 Enquanto isso, uma cache com menor tamanho é mais rápida no endereçamento e no seu acesso, já que é utilizado menos portas lógicas e possui menor tempo de propagação. Mas, dependendo da função de mapeamento, ela pode ter uma taxa de acerto mais baixa.
-</div>
+
 
 ## Tamanho do bloco
 
-<div align="justify">
+
 Blocos são conjuntos de palavra que a cache guarda. Por exemplo, a cache pode guardar 4 palavras de 32 bits em cada bloco, ou pode guardar apenas 1 palavra. Tudo isso depende da funcionalidade da cache.
 
 Nesse caso, quanto maior o bloco, maior a taxa de acerto da função de mapeamento. Entretanto, nem sempre é bom ter um bloco grande, pois pode ser haja maior necessidade de utilizar dados que foram substituídos, e não dados buscados recentemente.
-</div>
+
 
 ## Estrutura da Cache
 
-<div align="justify">
+
 Para organizar a memória da cache internamente, é necessário que haja alguns bits de controle e de identificação. Esses bits podem ser classificados da seguinte forma:
 
 - **Tag**: Possui o papel de identificar aquela linha.
@@ -57,15 +57,15 @@ Para organizar a memória da cache internamente, é necessário que haja alguns 
 - **Modificação**: Bit de modificação. Tem o papel de indicar se aquele dado foi modificado ou não.
 - **Bits de Substituição**: São bits utilizados por algoritmos de substituição. Por exemplo, se for implementado uma fila de dados, é necessário alguns bits para identificar quando aquele elemento foi inserido.
 - **Bits de Dados**: São os bits que contém as palavras do bloco.
-</div>
+
 
 ## Funções de mapeamento
-<div align="justify">
+
 Como o número de blocos na memória cache é sempre menor que o na memória principal, é necessário utilizar algoritimos que mapeiam os blocos da memória principal e atribuem eles aos blocos da memória cache, esses algoritimos são as funções de mapeamento, com as principais sendo:
-</div>
+
   
 ### Mapeamento Direto
-<div align="justify">
+
 No mapeamento direto, cada bloco na memória principal é mapeado em apenas uma linha da cache, segundo a equação `i = j mod(m)`, onde `i` é o númeoro da linha na cache, `j` é o número do bloco da memória principal e `m` o número de linhas total da cache.
 
 **############################# COLOCAR IMAGEM AQUI #############################**
@@ -81,21 +81,21 @@ Nesse método, o endereço de cada bloco na cache deve ser dividido em 4 campos:
 Além disso, para saber se a entrada da cache possui um endereço válido ou não temos que usar um bit de validade, geralmente marcado por `V`.
 
 **############################# COLOCAR IMAGEM AQUI #############################**
-</div>
+
 
 #### Vantagens
-<div align="justify">
+
 - É a técnica mais simples
 - Possui baixo custo de implementação
-</div>
+
 
 #### Desvantagem
-<div align="justify">
+
 - Cada bloco só pode ser mapeado para uma posição fixa da cache, logo, se forem acessados a dois blocos distintos mapeados na mesma linha eles serão continuamente trocados na cache, o que leva a uma baixa taxa de acertos. 
-</div>
+
 
 ### Mapeamento Associativo
-<div align="justify">
+
 O mapeamento associativo evita a desvantagem do mapeamento direto, pois um bloco da memória principal pode ser carregado em qualquer linha da cache.
 
 Nesse método, diferentemente do anterior, o endereço é dividido em somente 3 campos:
@@ -106,16 +106,16 @@ Nesse método, diferentemente do anterior, o endereço é dividido em somente 3 
 Para determinar se um bloco está na cache ou não, a lógica de controle de memória cache compara a tag do endereço do bloco com as tags de todos os blocos da cache.
 
 **############################# COLOCAR IMAGEM AQUI #############################**
-</div>
+
 
 #### Vantagem:
-<div align="justify">
+
 - Maior flexibilidade para escplher a linha a ser substituída quando um novo bloco é trazido para a cache.
-</div>
+
 
 #### Desvantagem:
-<div align="justify">
+
 - Maior complexidade do circuito necessários para a comparação das tags de todos os blocos da cache em paralelo.
-</div>
+
 
 ### Mapeamento Associativo por Conjunto
