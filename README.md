@@ -21,7 +21,15 @@ A memória cache foi feita como uma solução para esses problemas citados anter
 
 ### Características
 
+Uma das características principais da cache é que sua organização interna é feita diferente da organização interna da RAM. Enquanto a RAM organiza os dados por indexação, a cache organiza os dados pelo seu conteúdo.
+
+O que isso quer dizer é que a cache segue dois princípios quando organiza seus dados: o princípio da localidade temporal e localidade espacial. O princípio da localidade temporal quer dizer que se um dado foi utilizado recentemente, ele provavelmente será utilizado novamente. O princípio da temporalidade espacial consiste em que se um dado foi utilizado, as posições pertos desse dado também podem ser utilizadas futuramente. Um exemplo disso é uma estrutura que usa mais memória que uma palavra, ou uma lista contígua de dados.
+
 ## Tamanho da Cache
+
+O tamanho da cache é definido a partir de um trade-off. Quanto maior o tamanho da cache, mais portas lógicas ela terá que usar para indexar a memória, tendo um maior tempo de propagação e, por fim, sendo mais lenta o seu acesso. Por outro lado, uma função de mapeamento tem uma taxa de acerto mais alta.
+
+Enquanto isso, uma cache com menor tamanho é mais rápida no endereçamento e no seu acesso, já que é utilizado menos portas lógicas e possui menor tempo de propagação. Mas, dependendo da função de mapeamento, ela pode ter uma taxa de acerto mais baixa.
 
 ## Tamanho do bloco
 
