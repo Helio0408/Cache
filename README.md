@@ -1,3 +1,4 @@
+ <div align="justify">
 # Caches
 
 ## Introdução
@@ -93,3 +94,4 @@ Para determinar se um bloco está na cache ou não, a lógica de controle de mem
 - Maior complexidade do circuito necessários para a comparação das tags de todos os blocos da cache em paralelo.
 
 ### Mapeamento Associativo por Conjunto
+</div>
