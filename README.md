@@ -33,7 +33,19 @@ Enquanto isso, uma cache com menor tamanho é mais rápida no endereçamento e n
 
 ## Tamanho do bloco
 
+Blocos são conjuntos de palavra que a cache guarda. Por exemplo, a cache pode guardar 4 palavras de 32 bits em cada bloco, ou pode guardar apenas 1 palavra. Tudo isso depende da funcionalidade da cache.
+
+Nesse caso, quanto maior o bloco, maior a taxa de acerto da função de mapeamento. Entretanto, nem sempre é bom ter um bloco grande, pois pode ser haja maior necessidade de utilizar dados que foram substituídos, e não dados buscados recentemente.
+
 ## Estrutura da Cache
+
+Para organizar a memória da cache internamente, é necessário que haja alguns bits de controle e de identificação. Esses bits podem ser classificados da seguinte forma:
+
+- **Tag**: Possui o papel de identificar aquela linha.
+- **Validade**: Bit de validade. Serve para indicar se naquela linha há um dado válido.
+- **Modificação**: Bit de modificação. Tem o papel de indicar se aquele dado foi modificado ou não.
+- **Bits de Substituição**: São bits utilizados por algoritmos de substituição. Por exemplo, se for implementado uma fila de dados, é necessário alguns bits para identificar quando aquele elemento foi inserido.
+- **Bits de Dados**: São os bits que contém as palavras do bloco.
 
 ## Funções de mapeamento
 Como o número de blocos na memória cache é sempre menor que o na memória principal, é necessário utilizar algoritimos que mapeiam os blocos da memória principal e atribuem eles aos blocos da memória cache, esses algoritimos são as funções de mapeamento, com as principais sendo:
