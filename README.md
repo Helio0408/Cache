@@ -25,6 +25,10 @@ Porém, com o desenvolvimento computacional, notou-se que a RAM tornou-se um emp
 
 
 A memória cache foi feita como uma solução para esses problemas citados anteriormente. Ela é uma memória que fica entre o processador e a RAM, em que são guardados dados que são utilizados de maneira recorrente.
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/14/KL_Intel_486SL.jpg" alt>
+<em> Intel 80486, um processador que já possuía a cache integrada em seu circuito </em>
+</p>
 
 
 ### Características
@@ -34,9 +38,11 @@ Uma das características principais da cache é que sua organização interna é
 
 O que isso quer dizer é que a cache segue dois princípios quando organiza seus dados: o princípio da localidade temporal e localidade espacial. O princípio da localidade temporal quer dizer que se um dado foi utilizado recentemente, ele provavelmente será utilizado novamente. O princípio da temporalidade espacial consiste em que se um dado foi utilizado, as posições pertos desse dado também podem ser utilizadas futuramente. Um exemplo disso é uma estrutura que usa mais memória que uma palavra, ou uma lista contígua de dados.
 
+## Divisão da Cache
+
+Geralmente, os processadores possuem três tipos de cache. O primeiro tipo, é a ccache L1, uma cache de menor tamanho e mais próxima do processador, sendo a mais rápida. Também possuem a cache L2, uma cache de tamanho um pouco maior. Processadores modernos possuem até uma cache L3, que geralmente não está integrada ao circuito do processador. Uma curiosidade é que cada núcleo de um processador moderno possui sua própria cache L1.
 
 ## Tamanho da Cache
-
 
 O tamanho da cache é definido a partir de um trade-off. Quanto maior o tamanho da cache, mais portas lógicas ela terá que usar para indexar a memória, tendo um maior tempo de propagação e, por fim, sendo mais lenta o seu acesso. Por outro lado, uma função de mapeamento tem uma taxa de acerto mais alta.
 
@@ -45,14 +51,12 @@ Enquanto isso, uma cache com menor tamanho é mais rápida no endereçamento e n
 
 ## Tamanho do bloco
 
-
 Blocos são conjuntos de palavra que a cache guarda. Por exemplo, a cache pode guardar 4 palavras de 32 bits em cada bloco, ou pode guardar apenas 1 palavra. Tudo isso depende da funcionalidade da cache.
 
 Nesse caso, quanto maior o bloco, maior a taxa de acerto da função de mapeamento. Entretanto, nem sempre é bom ter um bloco grande, pois pode ser haja maior necessidade de utilizar dados que foram substituídos, e não dados buscados recentemente.
 
 
 ## Estrutura da Cache
-
 
 Para organizar a memória da cache internamente, é necessário que haja alguns bits de controle e de identificação. Esses bits podem ser classificados da seguinte forma:
 
