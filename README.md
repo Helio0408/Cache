@@ -155,10 +155,6 @@ Assim como no mapeamento direto, nesse método o endereço é dividido em 4 camp
 </p>
 
 ## Membros:
-</td>
-        </tr>
-    </tbody>
-</table>
 
 | NUSP     | Nomes                          |
 | :--------| -------------------------------|
