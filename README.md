@@ -4,8 +4,10 @@
 
 A memória é um componente importante nos computadores. Ela é uma parte fundamental da arquitetura de von Neumann, uma arquitetura que é base de muitos computadores até hoje. Nessa arquitetura, a função da memória é armazenar instruções que podem ser decodificadas e lidas pela Unidade de Controle e também armazenar dados, como resultados de operações de soma e subtração da Unidade Lógica de Controle (ULA).
 
+<p align="center">
 ![Arquitetura de von Neumann](img/arqvonneumann.png)
 *Diagrama da Arquitetura de von Neumann*
+</p>
 
 O computador possui vários tipos de armazenar dados em memória. Dentre elas, estão:
 - **Registradores**: São unidades de memória dentro do próprio processador. São neles que são feitas as operações da ULA do computador, e também são as memórias de mais rápido acesso. Geralmente, o processador os possui em pequena quantidade.
