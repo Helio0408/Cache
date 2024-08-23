@@ -122,3 +122,27 @@ Para determinar se um bloco está na cache ou não, a lógica de controle de mem
 
 
 ### Mapeamento Associativo por Conjunto
+Esse tipo de mapeamento combina as vantagens do mapeamento direto e do mapeamento associativo, assim minimizando as desvantagens. Esse modelo divide a memória cache em `v` conjuntos de `k` linhas.
+
+Assim como no mapeamento direto, nesse método o endereço é dividido em 4 campos (diferentes do mapeamento direto):
+- **Byte offset**: Para arquiteturas endereçadas a byte
+- **Word offset**: Para quando um bloco possui mais de uma palavra
+- **Set**: Para a identificação do conjunto
+- **Tag**: Resto do endereço (Identificação do bloco)
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+O endereço da memória cache é interpretado como a junção dos campos: `rótulo + conjunto + palavra`.
+
+Existem dois tipos de mapeamento associativo por conjuntos, que são:
+- **Mapeamento totalmente associativo**: Tag muito grande e é comparada com a tag de cada bloco de memória cache
+- **Mapeamento associativo por conjunto de k linhas**: Tag bem menor e só é comparada com k tags do mesmo set
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
+**############################# COLOCAR IMAGEM AQUI #############################**
+
