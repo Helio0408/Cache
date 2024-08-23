@@ -6,7 +6,7 @@ A memória é um componente importante nos computadores. Ela é uma parte fundam
 
 <p align="center">
 <img src="img/arqvonneumann.png" alt>
-*Diagrama da Arquitetura de von Neumann*
+<em> Diagrama da Arquitetura de von Neumann* </em>
 </p>
 
 O computador possui vários tipos de armazenar dados em memória. Dentre elas, estão:
