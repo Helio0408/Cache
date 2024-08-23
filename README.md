@@ -4,8 +4,8 @@
 
 A memória é um componente importante nos computadores. Ela é uma parte fundamental da arquitetura de von Neumann, uma arquitetura que é base de muitos computadores até hoje. Nessa arquitetura, a função da memória é armazenar instruções que podem ser decodificadas e lidas pela Unidade de Controle e também armazenar dados, como resultados de operações de soma e subtração da Unidade Lógica de Controle (ULA).
 
-![Arquitetura de von Neumann](img/arqvonneumann.png)
 <p align="center">
+<img src="img/arqvonneumann.png" alt>
 *Diagrama da Arquitetura de von Neumann*
 </p>
 
