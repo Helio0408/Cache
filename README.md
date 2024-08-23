@@ -40,7 +40,7 @@ O que isso quer dizer é que a cache segue dois princípios quando organiza seus
 
 ## Divisão da Cache
 
-Geralmente, os processadores possuem três tipos de cache. O primeiro tipo, é a ccache L1, uma cache de menor tamanho e mais próxima do processador, sendo a mais rápida. Também possuem a cache L2, uma cache de tamanho um pouco maior. Processadores modernos possuem até uma cache L3, que geralmente não está integrada ao circuito do processador. Uma curiosidade é que cada núcleo de um processador moderno possui sua própria cache L1.
+Geralmente, os processadores possuem três tipos de cache. O primeiro tipo, é a cache L1, uma cache de menor tamanho e mais próxima do processador, sendo a mais rápida. Também possuem a cache L2, uma cache de tamanho um pouco maior. Processadores modernos possuem até uma cache L3, que geralmente não está integrada ao circuito do processador. Uma curiosidade é que cada núcleo de um processador moderno possui sua própria cache L1.
 
 ## Tamanho da Cache
 
