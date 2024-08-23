@@ -70,17 +70,18 @@ Para organizar a memória da cache internamente, é necessário que haja alguns 
 - **Bits de Substituição**: São bits utilizados por algoritmos de substituição. Por exemplo, se for implementado uma fila de dados, é necessário alguns bits para identificar quando aquele elemento foi inserido.
 - **Bits de Dados**: São os bits que contém as palavras do bloco.
 
-
 ## Funções de mapeamento
 
 Como o número de blocos na memória cache é sempre menor que o na memória principal, é necessário utilizar algoritimos que mapeiam os blocos da memória principal e atribuem eles aos blocos da memória cache, esses algoritimos são as funções de mapeamento, com as principais sendo:
 
-  
 ### Mapeamento Direto
 
 No mapeamento direto, cada bloco na memória principal é mapeado em apenas uma linha da cache, segundo a equação `i = j mod(m)`, onde `i` é o númeoro da linha na cache, `j` é o número do bloco da memória principal e `m` o número de linhas total da cache.
 
-**############################# COLOCAR IMAGEM AQUI #############################**
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8eb532e5-df0a-4dfc-85e1-da3f355d8b7d" alt>
+<em> Mapeamento direto </em>
+</p>
 
 Já que vários blocos da memória principal podem ser mapeados na mesma linha da memória cache, para saber se o bloco que se quer acessar é o que já está na cache, um campo chamado de tag (ou rótulo) deve ser usado para identificar cada bloco.
 
@@ -91,9 +92,6 @@ Nesse método, o endereço de cada bloco na cache deve ser dividido em 4 campos:
 - **Tag**: Resto do endereço (Identificação do bloco)
 
 Além disso, para saber se a entrada da cache possui um endereço válido ou não temos que usar um bit de validade, geralmente marcado por `V`.
-
-**############################# COLOCAR IMAGEM AQUI #############################**
-
 
 #### Vantagens
 
@@ -117,8 +115,10 @@ Nesse método, diferentemente do anterior, o endereço é dividido em somente 3 
 
 Para determinar se um bloco está na cache ou não, a lógica de controle de memória cache compara a tag do endereço do bloco com as tags de todos os blocos da cache.
 
-**############################# COLOCAR IMAGEM AQUI #############################**
-
+<p align="center">
+<img src="https://github.com/user-attachments/assets/41739e09-22cf-4674-a7de-0eae083be6d3" alt>
+<em> Organização da cache </em>
+</p>
 
 #### Vantagem:
 
@@ -139,19 +139,17 @@ Assim como no mapeamento direto, nesse método o endereço é dividido em 4 camp
 - **Set**: Para a identificação do conjunto
 - **Tag**: Resto do endereço (Identificação do bloco)
 
-**############################# COLOCAR IMAGEM AQUI #############################**
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3867abc5-1b65-4803-8de7-9a2d19a2393d" alt>
+<em> Cache mapeada associativamente </em>
+</p>
 
-**############################# COLOCAR IMAGEM AQUI #############################**
+<p align="center">
+<img src="https://github.com/user-attachments/assets/60e73bee-325b-45a0-bc68-2078fbfd7e04" alt>
+<em> Reduzido a direto </em>
+</p>
 
-**############################# COLOCAR IMAGEM AQUI #############################**
-
-O endereço da memória cache é interpretado como a junção dos campos: `rótulo + conjunto + palavra`.
-
-Existem dois tipos de mapeamento associativo por conjuntos, que são:
-- **Mapeamento totalmente associativo**: Tag muito grande e é comparada com a tag de cada bloco de memória cache
-- **Mapeamento associativo por conjunto de k linhas**: Tag bem menor e só é comparada com k tags do mesmo set
-
-**############################# COLOCAR IMAGEM AQUI #############################**
-
-**############################# COLOCAR IMAGEM AQUI #############################**
-
+<p align="center">
+<img src="https://github.com/user-attachments/assets/4afd9df8-40be-4064-aaeb-6935cd71f97c" alt>
+<em> Reduzido a associativo </em>
+</p>
