@@ -153,3 +153,16 @@ Assim como no mapeamento direto, nesse método o endereço é dividido em 4 camp
 <img src="https://github.com/user-attachments/assets/4afd9df8-40be-4064-aaeb-6935cd71f97c" alt>
 <em> Reduzido a associativo </em>
 </p>
+
+## Membros:
+</td>
+        </tr>
+    </tbody>
+</table>
+
+| NUSP     | Nomes                          |
+| :--------| -------------------------------|
+| 14577862 |   Hélio Márcio Cabral Santos   |  
+| 14572099 |    Gabriel Martins Monteiro    |
+| 11819487 |      Andrey Cortez Rufino      |
+| 14567304 | Eduardo Pereira de Luna Freire |
