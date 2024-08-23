@@ -141,7 +141,7 @@ Assim como no mapeamento direto, nesse método o endereço é dividido em 4 camp
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3867abc5-1b65-4803-8de7-9a2d19a2393d" alt>
-<p> <em> Cache mapeada associativamente </em> </p>
+<p align="center"> <em> Cache mapeada associativamente </em> </p>
 </p>
 
 <p align="center">
