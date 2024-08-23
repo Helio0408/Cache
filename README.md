@@ -140,8 +140,8 @@ Assim como no mapeamento direto, nesse método o endereço é dividido em 4 camp
 - **Tag**: Resto do endereço (Identificação do bloco)
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/3867abc5-1b65-4803-8de7-9a2d19a2393d" alt>
-<p align="center"> <em> Cache mapeada associativamente </em> </p>
+<img src="https://github.com/user-attachments/assets/3867abc5-1b65-4803-8de7-9a2d19a2393d" alt> <br>
+<em> Cache mapeada associativamente </em>
 </p>
 
 <p align="center">
